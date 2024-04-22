@@ -1,0 +1,32 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Plant Care Guide</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/main.css")">
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <h1 id="plantTitle">Plant Reviews</h1>
+            <div id="reviewsContainer">
+            </div>
+
+            <div class="add-review-section">
+                <h3 id="formTitle">Add a Review</h3>
+                <textarea id="reviewText" rows="4" required></textarea>
+                <button id="submitReviewButton" onclick="submitReview()">Submit Review</button>
+                <button id="editButton" onclick="updateReview()" style="display:none;">Update Review</button>
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+    </div>
+
+    <script src="@Url.Content("~/js/main.js")"></script>
+</body>
+</html>

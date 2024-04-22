@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantParadise - Home</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/main.css")">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-title">Welcome! </div>
+            <nav class="navigation">
+                <a href="@Url.Action("Index", "Home")" class="active">Home</a>
+                <a href="@Url.Action("Guide", "Home")">Guide</a>
+                <a href="@Url.Action("Purchase", "Home")">Purchase</a>
+                <a href="@Url.Action("About", "Home")">About Us</a>
+            </nav>
+        </header>
+        <section class="intro">
+            <div class="plant-images">
+                <h2 class="heading02" style="font-size: 40px; font-family:'Berlin Sans FB'">PLANT PARADISE</h2>
+                <h4 class="heading03" style="font-size: 15px; font-family: 'Arial Rounded MT'">Unlock the secrets to thriving indoor gardens! From care tips to watering schedules, our ultimate houseplant guide has all you need. Elevate your space with lush greenery-buy now and watch your indoor garden flourish!</h4>
+                <img src="@Url.Content("~/img/HomePlant02.jpg")" alt="HomePlant">
+            </div>
+            <a href="@Url.Action("Guide", "Home")" class="cta-button">Explore Guide</a>
+        </section>
+    </div>
+</body>
+</html>
