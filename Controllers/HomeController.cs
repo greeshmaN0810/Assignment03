@@ -26,13 +26,17 @@ namespace Assignment03.Controllers
         {
             return View();
         }
-        public IActionResult Review()
+        public IActionResult Reviews()
         {
             return View();
         }
-       
+        public IActionResult Stats()
+        {
+            return View();
+        }
 
-        
-        
+
+
+
     }
 }
