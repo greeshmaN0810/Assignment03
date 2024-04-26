@@ -29,7 +29,7 @@
             margin: auto; 
         }
 
-        /* Styles for the heading and description */
+        
         .chart-heading {
             margin: 20px 0;
             font-size: 1.5rem;
@@ -243,13 +243,12 @@
             }
         });
 
-        // Setting up the data for the Scatter Plot
         const scatterData = {
             datasets: [{
                 label: 'Air Purifying Plants',
                 data: plantData.filter(plant => plant.airPurifying === "Yes").map(plant => ({
                     x: plant.wateringSchedule,
-                    y: parseFloat(plant.price.slice(1)), // Remove the dollar sign and convert to number
+                    y: parseFloat(plant.price.slice(1)),
                     plantName: plant.plant
                 })),
                 backgroundColor: 'rgba(75, 192, 192, 0.5)',
@@ -264,7 +263,6 @@
             }]
         };
 
-        // Configuring the Scatter Plot
         const scatterConfig = {
             type: 'scatter',
             data: scatterData,
@@ -299,7 +297,6 @@
             }
         };
 
-        // Initializing the Scatter Plot
         const priceWateringScatterChart = new Chart(
             document.getElementById('priceWateringScatterChart'),
             scatterConfig
