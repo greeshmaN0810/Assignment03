@@ -1,7 +1,6 @@
 ﻿using Assignment03.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
 namespace Assignment03.Controllers
 {
     public class HomeController : Controller
@@ -34,9 +33,5 @@ namespace Assignment03.Controllers
         {
             return View();
         }
-
-
-
-
     }
 }
