@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Tips</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/main.css")">
+    <script src="@Url.Content("~/js/main.js")"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+<header class="header">
+            <div class="header-title">Buy Now!</div>
+            <nav class="navigation">
+                <a href="@Url.Action("Index", "Home")">Home</a>
+                <a href="@Url.Action("Guide", "Home")">Guide</a>
+                <a href="@Url.Action("Purchase", "Home")" class="active">Purchase</a>
+                <a href="@Url.Action("About", "Home")">About Us</a>
+                <a href="@Url.Action("Stats", "Home")">Statistics</a>
+            </nav>
+        </header>
+         <main>
+            <div class="plants-container">
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/ferm.png")" alt="Fern">
+                    <h3>Fern</h3>
+                    <p>Ferns offer lush greenery and thrive in indirect light and high humidity, making them ideal for bathrooms.</p>
+                    <span class="air-purifying">Air-purifying: No</span>
+                    <span class="price">$11.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Fern')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Fern plant" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/spiderplant.jpg")" alt="Spider Plant">
+                    <h3>Spider Plant</h3>
+                    <p>Spider Plants are resilient and excellent at purifying the air; they adapt well to a variety of conditions.</p>
+                    <span class="air-purifying">Air-purifying: Yes</span>
+                    <span class="price">$8.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Spider Plant')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Spider plant" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/rubber.png")" alt="Rubber Tree">
+                    <h3>Rubber Tree</h3>
+                    <p>With large, glossy leaves, Rubber Trees add a bold statement to any room and prefer indirect light.</p>
+                    <span class="air-purifying">Air-purifying: Yes</span>
+                    <span class="price">$15.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Rubber Tree')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Rubber Tree" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/alloevera.jpg")" alt="Aloe Vera">
+                    <h3>Aloe Vera</h3>
+                    <p>Aloe Vera is known for its medicinal properties and thrives in sunny spots with occasional watering.</p>
+                    <span class="air-purifying">Air-purifying: Yes</span>
+                    <span class="price">$9.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Aloe Vera')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Aloe Vera" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/plily.jpg")" alt="Peace Lily">
+                    <h3>Peace Lily</h3>
+                    <p>Peace Lilies bloom beautiful white flowers and can improve air quality; they enjoy low to moderate light.</p>
+                    <span class="air-purifying">Air-purifying: Yes</span>
+                    <span class="price">$12.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Peace Lily')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Peace Lily" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/pothos.jpg")" alt="Pothos">
+                    <h3>Pothos</h3>
+                    <p>Pothos is a versatile vine that grows well in a variety of lighting conditions and is great for beginners.</p>
+                    <span class="air-purifying">Air-purifying: Yes</span>
+                    <span class="price">$6.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Pothos')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Pothos" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/devil.png")" alt="Devil's Ivy">
+                    <h3>Devil's Ivy</h3>
+                    <p>Devil's Ivy, similar to Pothos, is a fast-growing vine that is forgiving and can tolerate low light.</p>
+                    <span class="air-purifying">Air-purifying: Yes</span>
+                    <span class="price">$7.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Devil Ivy')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Devil's Ivy" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/ZZ.jpg")" alt="ZZ plant">
+                    <h3>ZZ Plant</h3>
+                    <p>ZZ Plants are drought-tolerant and require minimal care, making them suitable for those with a busy lifestyle.</p>
+                    <span class="air-purifying">Air-purifying: No</span>
+                    <span class="price">$12.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('ZZ Plant')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "ZZ plant" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+                <div class="plant-item">
+                    <img src="@Url.Content("~/img/chinesemp.jpg")" alt="Chinese Money Plant">
+                    <h3>Chinese Money Plant</h3>
+                    <p>Chinese Money Plants are known for their unique round leaves and can bring a playful aesthetic to any space.</p>
+                    <span class="air-purifying">Air-purifying: No</span>
+                    <span class="price">$8.99</span>
+                    <div class="plant-actions">
+                        <button type="button" class="buy-btn" onclick="openBuyForm('Chinese Money Plant')">Buy</button>
+                        <a href="@Url.Action("Reviews", "Home", new { plant = "Chinese Money Plant" })" class="reviews-btn">Reviews</a>
+                    </div>
+                </div>
+            </div>
+            <section class="intro02">
+                <a href="@Url.Action("About", "Home")" class="cta-button02">About Us</a>
+                </section>
+        </main>
+    </div>
+</body>
+</html>
